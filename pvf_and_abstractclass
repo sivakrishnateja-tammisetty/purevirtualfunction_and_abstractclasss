@@ -7,3 +7,56 @@ ABSTRACT CLASS:
                 .The classes inheriting the abstract classes must provide a definition for pure virtual function,otherwise subclass also become an abstract class.
                 .Abstract class means incomplete (no definition).
                 .Its not possible to create object for abstarct class,because the abstract class doesn't contain definition.so we can access pure virtual function with the help of base class pointer.
+
+
+
+
+
+                                               //ABSTRACT CLASS & PURE VIRTUAL FUNCTION
+
+#include <iostream>
+using namespace std;
+class Shape
+{
+    public:
+    virtual void calculateArea()=0;
+};
+class Square:public Shape
+{
+    public:
+    int a;
+    Square(int a)
+    {
+        this->a=a;
+    }
+    void calculateArea()
+    {
+        cout<<"Area of Square is :"<<(a*a)<<endl;
+    }
+};
+class Rectangle:public Shape
+{
+    public:
+    int l,b;
+    Rectangle(int l,int b)
+    {
+        this->l=l;
+        this->b=b;
+    }
+    void calculateArea()
+    {
+        cout<<"Area of Rectangle is :"<<(l*b)<<endl;
+    }
+};
+
+int main() {
+    Shape *bptr;
+    Square s(3);
+    bptr=&s;
+    bptr->calculateArea();
+    Rectangle r(2,3);
+    bptr=&r;
+    bptr->calculateArea();
+  
+    return 0;
+}
