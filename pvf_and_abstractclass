@@ -10,6 +10,8 @@ ABSTRACT CLASS:
 INTERFACE:
           .A class which has only pure virtual functions is called interface.
 
+NOTE: We never create direct object to abstract class and interface class(only pointer).
+
 
 
 
