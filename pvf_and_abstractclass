@@ -7,6 +7,8 @@ ABSTRACT CLASS:
                 .The classes inheriting the abstract classes must provide a definition for pure virtual function,otherwise subclass also become an abstract class.
                 .Abstract class means incomplete (no definition).
                 .Its not possible to create object for abstarct class,because the abstract class doesn't contain definition.so we can access pure virtual function with the help of base class pointer.
+INTERFACE:
+          .A class which has only pure virtual functions is called interface.
 
 
 
